@@ -1,8 +1,12 @@
 package net.quetzi.qmunity.sleeppeeps;
 
 import java.util.logging.Logger;
+
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
+import net.quetzi.qmunity.commands.ResetCommand;
+import net.quetzi.qmunity.commands.VersionCommand;
+import net.quetzi.qmunity.references.References;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -13,7 +17,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 //import cpw.mods.fml.relauncher.Side;
 //import cpw.mods.fml.relauncher.SideOnly;
 
-@Mod(modid = "SleepPeeps", name = "Sleep Peeps", version = "152.0.0.7")
+@Mod(modid = References.MODID, name = References.NAME, version = References.VERSION)
 @NetworkMod(clientSideRequired = false, serverSideRequired = true)
 public class SleepPeeps {
     public static int perc;
@@ -46,5 +50,6 @@ public class SleepPeeps {
     //@SideOnly(Side.SERVER)
     public void serverLoad(FMLServerStartingEvent event) {
         event.registerServerCommand(new ResetCommand());
+        event.registerServerCommand(new VersionCommand());
     }
 }

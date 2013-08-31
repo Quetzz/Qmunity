@@ -1,4 +1,4 @@
-package net.quetzi.qmunity.sleeppeeps;
+package net.quetzi.qmunity.commands;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +8,7 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.dedicated.DedicatedServer;
+import net.quetzi.qmunity.sleeppeeps.SleepPeeps;
 
 public class ResetCommand implements ICommand {
     private List<String> aliases;
